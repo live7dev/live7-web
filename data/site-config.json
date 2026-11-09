@@ -20,8 +20,8 @@
     "whatsapp": "+44 7367335837",
     "whatsappHref": "https://wa.me/447367335837",
     "whatsappDisplay": "+44 7367 335 837",
-    "email": "[EMAIL_ADDRESS]",
-    "emailHref": "mailto:orders@live7foods.co.uk",
+    "email": "info@live7impex.co.uk",
+    "emailHref": "mailto:info@live7impex.co.uk",
     "hours": "Monday - Saturday: 6:00 AM - 7:00 PM",
     "depots": [
       {
@@ -63,10 +63,25 @@
     }
   ],
   "navigation": [
-    { "label": "Catalog", "target": "#catalog" },
-    { "label": "Categories", "target": "#categories" },
-    { "label": "Wholesale & Retail", "target": "#about" },
-    { "label": "FAQs", "target": "#faq" },
-    { "label": "Depots & Contact", "target": "#contact" }
+    {
+      "label": "Catalog",
+      "target": "#catalog"
+    },
+    {
+      "label": "Categories",
+      "target": "#categories"
+    },
+    {
+      "label": "Wholesale & Retail",
+      "target": "#about"
+    },
+    {
+      "label": "FAQs",
+      "target": "#faq"
+    },
+    {
+      "label": "Depots & Contact",
+      "target": "#contact"
+    }
   ]
 }
