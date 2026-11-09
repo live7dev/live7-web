@@ -14,9 +14,19 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Live7 Wholesale | Fresh Farm Produce & Grain Logistics",
+  title: "Live7 | Fresh Farm Produce & Grain Logistics",
   description:
     "Newly launched UK wholesale produce supplier providing fresh farm vegetables, seasonal fruits, and bulk basmati rice directly to trade clients.",
+  icons: {
+    icon: [
+      { url: "/live7-favicon.ico" },
+      { url: "/live7-favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/live7-favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
