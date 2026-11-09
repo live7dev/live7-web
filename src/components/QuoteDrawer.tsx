@@ -12,7 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
 import { useQuote } from "@/context/QuoteContext";
 import { SiteConfig } from "@/types";
 
@@ -42,7 +41,7 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
     return quoteList
       .map(
         (item, i) =>
-          `${i + 1}. ${item.title} (${item.packSize}) x ${item.quantity} units [SKU: ${item.sku}]`
+          `${i + 1}. ${item.title} (${item.packSize}) x ${item.quantity} [SKU: ${item.sku}]`
       )
       .join("\n");
   };
@@ -59,14 +58,13 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
       `*LIVE7 WHOLESALE - NEW QUOTE REQUEST*\n` +
       `--------------------------------------\n` +
       `*Contact Name:* ${name}\n` +
-      `*Business Name / Type:* ${business || "Not specified"}\n` +
+      `*Business Name:* ${business || "Not specified"}\n` +
       `*Phone:* ${phone}\n` +
       `*Email:* ${email || "N/A"}\n` +
       `*Delivery Postcode:* ${postcode || "N/A"}\n\n` +
-      `*Requested Items (Zero Price Catalog):*\n${getItemsSummary()}\n\n` +
-      `*Additional Requirements:* ${notes || "Standard wholesale inquiry"}\n` +
-      `--------------------------------------\n` +
-      `Please provide current wholesale prices and depot dispatch timetable.`;
+      `*Requested Items:*\n${getItemsSummary()}\n\n` +
+      `*Notes:* ${notes || "Standard wholesale pricing requested"}\n` +
+      `--------------------------------------`;
 
     window.open(`https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
@@ -113,31 +111,31 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
             Wholesale Quote Request
           </SheetTitle>
           <SheetDescription className="text-slate-400 text-xs">
-            Zero-price trade inquiry • Direct depot response within 60 mins
+            Direct depot quotation • Rapid response during trade hours
           </SheetDescription>
         </SheetHeader>
 
-        <div className="flex-1 overflow-y-auto p-4 sm:p-5 flex flex-col gap-5">
+        <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-5">
           {quoteList.length === 0 ? (
-            <div className="py-16 text-center flex flex-col items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3">
-                <ShoppingBag className="w-6 h-6" />
+            <div className="py-20 text-center flex flex-col items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3">
+                <ShoppingBag className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-slate-800 text-base">Your Quote List is Empty</h4>
+              <h4 className="font-bold text-slate-800 text-sm">Your quote list is empty</h4>
               <p className="text-xs text-slate-500 max-w-xs mt-1">
-                Browse our wholesale catalog and click "+ Add to Quote" on any vegetable, fruit, or grain item.
+                Browse our catalog and select "+ Add to Quote" on any item.
               </p>
               <Button
                 size="sm"
                 onClick={() => setIsDrawerOpen(false)}
-                className="mt-4 bg-emerald-800 hover:bg-emerald-900 text-white font-bold"
+                className="mt-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold px-4"
               >
-                Browse Products
+                Browse Catalog
               </Button>
             </div>
           ) : (
             <>
-              {/* Items List */}
+              {/* Selected Items */}
               <div className="flex flex-col gap-2.5">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
@@ -146,7 +144,7 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                   <button
                     type="button"
                     onClick={clearQuote}
-                    className="text-[11px] text-slate-400 hover:text-red-600 transition-colors cursor-pointer"
+                    className="text-xs text-slate-400 hover:text-red-600 transition-colors cursor-pointer"
                   >
                     Clear All
                   </button>
@@ -156,23 +154,20 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                   {quoteList.map((item, idx) => (
                     <div
                       key={`${item.productId}-${item.packSize}`}
-                      className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200"
+                      className="flex items-center justify-between p-3 rounded-xl bg-slate-50/80 border border-slate-200/80"
                     >
                       <div className="flex items-center gap-3 min-w-0 flex-1 pr-2">
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="w-12 h-12 rounded-lg object-cover shrink-0 bg-slate-200"
+                          className="w-11 h-11 rounded-lg object-cover shrink-0 bg-slate-200"
                         />
                         <div className="min-w-0">
-                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">
+                          <h4 className="text-xs font-bold text-slate-900 truncate">
                             {item.title}
                           </h4>
-                          <Badge variant="brand" className="text-[10px] px-1.5 py-0 mt-0.5">
+                          <span className="inline-block text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded mt-0.5">
                             {item.packSize}
-                          </Badge>
-                          <span className="block text-[11px] text-slate-400 font-mono mt-0.5">
-                            SKU: {item.sku}
                           </span>
                         </div>
                       </div>
@@ -182,7 +177,7 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                           <button
                             type="button"
                             onClick={() => updateQuantity(idx, -1)}
-                            className="w-7 h-7 flex items-center justify-center text-slate-700 hover:bg-slate-100 font-bold text-xs cursor-pointer"
+                            className="w-7 h-7 flex items-center justify-center text-slate-600 hover:bg-slate-100 text-xs cursor-pointer"
                           >
                             <Minus className="w-3 h-3" />
                           </button>
@@ -192,7 +187,7 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                           <button
                             type="button"
                             onClick={() => updateQuantity(idx, 1)}
-                            className="w-7 h-7 flex items-center justify-center text-slate-700 hover:bg-slate-100 font-bold text-xs cursor-pointer"
+                            className="w-7 h-7 flex items-center justify-center text-slate-600 hover:bg-slate-100 text-xs cursor-pointer"
                           >
                             <Plus className="w-3 h-3" />
                           </button>
@@ -204,7 +199,7 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                           className="p-1 text-slate-400 hover:text-red-600 transition-colors cursor-pointer"
                           title="Remove item"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="w-3.5 h-3.5" />
                         </button>
                       </div>
                     </div>
@@ -212,39 +207,41 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                 </div>
               </div>
 
-              {/* Form Fields */}
-              <div className="border-t border-slate-200 pt-4 flex flex-col gap-3">
+              {/* Inquiry Form */}
+              <div className="border-t border-slate-200/80 pt-4 flex flex-col gap-3">
                 <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                  Your Trade Details
+                  Contact Details
                 </span>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-700 mb-1">
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
                       Contact Name *
                     </label>
                     <Input
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. David Campbell"
+                      className="h-9 text-xs"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-700 mb-1">
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
                       Business Name
                     </label>
                     <Input
                       value={business}
                       onChange={(e) => setBusiness(e.target.value)}
                       placeholder="e.g. Royal Curry Lounge"
+                      className="h-9 text-xs"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-700 mb-1">
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
                       Phone / WhatsApp *
                     </label>
                     <Input
@@ -252,42 +249,33 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+44 7911 123456"
                       type="tel"
+                      className="h-9 text-xs"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-700 mb-1">
-                      Email Address
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                      Delivery Postcode
                     </label>
                     <Input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="orders@mybusiness.co.uk"
-                      type="email"
+                      value={postcode}
+                      onChange={(e) => setPostcode(e.target.value)}
+                      placeholder="e.g. NW10 7PA"
+                      className="h-9 text-xs"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-bold text-slate-700 mb-1">
-                    Delivery Postcode / Town
-                  </label>
-                  <Input
-                    value={postcode}
-                    onChange={(e) => setPostcode(e.target.value)}
-                    placeholder="e.g. NW10 7PA or Birmingham B6"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-bold text-slate-700 mb-1">
-                    Delivery Notes / Requirements
+                  <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                    Notes / Delivery Timing
                   </label>
                   <Textarea
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    placeholder="e.g. Pre-7am drops preferred, trial 5 sacks first."
+                    placeholder="e.g. Need Monday pre-7am drops, trial 5 sacks first."
                     rows={2}
+                    className="text-xs min-h-[65px]"
                   />
                 </div>
 
@@ -296,34 +284,34 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
                   <Button
                     onClick={handleSendWhatsApp}
                     variant="whatsapp"
-                    className="w-full font-bold"
+                    className="w-full font-bold text-xs sm:text-sm h-11 rounded-xl"
                   >
                     <MessageSquare className="w-4 h-4 mr-1.5" />
-                    Send Quote Request via WhatsApp
+                    Send Quote via WhatsApp
                   </Button>
 
                   <Button
                     onClick={handleSendEmail}
-                    className="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs h-10 rounded-xl"
                   >
-                    <Mail className="w-4 h-4 mr-1.5" />
+                    <Mail className="w-3.5 h-3.5 mr-1.5" />
                     Submit via Email
                   </Button>
 
                   <Button
                     onClick={handleCopySummary}
-                    variant="secondary"
-                    className="w-full font-semibold"
+                    variant="ghost"
+                    className="w-full text-slate-500 hover:text-slate-900 text-xs h-8"
                   >
                     {copied ? (
                       <>
-                        <Check className="w-4 h-4 mr-1.5 text-emerald-700" />
-                        <span className="text-emerald-700 font-bold">Copied to Clipboard!</span>
+                        <Check className="w-3.5 h-3.5 mr-1 text-emerald-700" />
+                        <span className="text-emerald-700 font-semibold">Copied!</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="w-4 h-4 mr-1.5" />
-                        <span>Copy Quote Summary to Clipboard</span>
+                        <Copy className="w-3.5 h-3.5 mr-1" />
+                        <span>Copy Summary</span>
                       </>
                     )}
                   </Button>
@@ -336,4 +324,3 @@ export function QuoteDrawer({ config }: QuoteDrawerProps) {
     </Sheet>
   );
 }
-

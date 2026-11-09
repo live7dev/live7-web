@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import { Plus, Check, MessageSquare, FileText, SearchX } from "lucide-react";
+import { Plus, Check, SearchX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import { Product, Category } from "@/types";
 import { useQuote } from "@/context/QuoteContext";
 
@@ -53,45 +51,33 @@ export function Catalog({
     return matchCategory && matchText;
   });
 
-  const handleQuickWhatsApp = (product: Product, size: string) => {
-    const cleanNumber = whatsappNumber.replace(/[^0-9]/g, "");
-    const text = encodeURIComponent(
-      `Hello Live7 Wholesale! I would like to request current wholesale pricing and availability for:\n` +
-        `• Product: ${product.title}\n` +
-        `• Pack Size: ${size}\n` +
-        `• SKU: ${product.sku}\n\n` +
-        `Please share your volume rates and delivery schedule.`
-    );
-    window.open(`https://wa.me/${cleanNumber}?text=${text}`, "_blank");
-  };
-
   return (
-    <section id="catalog" className="py-12 sm:py-16 px-4 sm:px-6">
+    <section id="catalog" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-              Fresh Produce & Grains
+              Produce &amp; Grains
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
-              Wholesale Master Catalog
+              Wholesale Catalog
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Select your required pack size and add items to your trade quote enquiry.
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Choose your required pack size and add items to your quote request.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-semibold text-slate-500">
-              Showing {filteredProducts.length} of {products.length} products
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-medium text-slate-400">
+              {filteredProducts.length} items available
             </span>
           </div>
         </div>
 
-        {/* Categories Bar */}
-        <div id="categories" className="mb-8">
+        {/* Minimal Category Filter Pills */}
+        <div id="categories" className="mb-10">
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {categories.map((cat) => {
               const isActive = activeCategory === cat.id;
@@ -100,13 +86,13 @@ export function Catalog({
                   key={cat.id}
                   type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                  className={`shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all cursor-pointer ${
                     isActive
-                      ? "bg-emerald-800 text-white shadow-sm"
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                      ? "bg-slate-900 text-white shadow-xs"
+                      : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:border-slate-300"
                   }`}
                 >
-                  <span>{cat.title}</span>
+                  {cat.title}
                 </button>
               );
             })}
@@ -115,31 +101,29 @@ export function Catalog({
 
         {/* Empty State */}
         {filteredProducts.length === 0 ? (
-          <div className="py-16 px-4 text-center bg-white rounded-2xl border border-slate-200">
-            <SearchX className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <h3 className="text-lg font-bold text-slate-800">No wholesale items match your search</h3>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto mt-1">
-              Looking for a specific produce crate, container pallet, or ethnic grocery line? Contact our trade desk directly.
+          <div className="py-20 px-4 text-center bg-white rounded-2xl border border-slate-200/80">
+            <SearchX className="w-10 h-10 text-slate-300 mx-auto mb-3" />
+            <h3 className="text-base font-bold text-slate-800">No products match your search</h3>
+            <p className="text-xs text-slate-500 max-w-sm mx-auto mt-1">
+              Looking for a custom line, spice, or bulk container? Connect with our trade desk directly.
             </p>
-            <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <div className="mt-5 flex justify-center gap-2.5">
               <Button
                 variant="outline"
                 size="sm"
+                className="rounded-full text-xs"
                 onClick={() => {
                   setActiveCategory("all");
                   setSearchQuery("");
                 }}
               >
-                Reset Filters
-              </Button>
-              <Button asChild size="sm" className="bg-emerald-800 hover:bg-emerald-900 text-white">
-                <a href="#contact">Contact Trade Desk</a>
+                Clear Filters
               </Button>
             </div>
           </div>
         ) : (
-          /* Products Grid (STRICTLY NO PRICES) */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          /* Clean Minimal Grid */
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-7">
             {filteredProducts.map((product) => {
               const selectedSize =
                 selectedPackSizes[product.id] ||
@@ -152,50 +136,45 @@ export function Catalog({
               );
 
               return (
-                <Card
+                <div
                   key={product.id}
-                  className="overflow-hidden flex flex-col hover:shadow-md transition-all group"
+                  className="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col hover:border-slate-300 transition-all hover:shadow-xs group"
                 >
-                  {/* Image Container with Badges */}
+                  {/* Clean Image */}
                   <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.alt || product.title}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     />
-                    <div className="absolute top-2.5 left-2.5">
-                      <Badge variant="outline" className="bg-white/95 backdrop-blur-xs font-bold text-[11px] shadow-2xs">
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[11px] font-semibold text-slate-700 shadow-2xs">
                         {product.origin}
-                      </Badge>
-                    </div>
-                    <div className="absolute top-2.5 right-2.5">
-                      <Badge variant="default" className="bg-emerald-800/90 text-white font-bold text-[11px] shadow-2xs">
-                        {product.stockStatus}
-                      </Badge>
+                      </span>
                     </div>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col">
-                    <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                      <span className="font-mono text-[11px]">SKU: {product.sku}</span>
+                  <div className="p-5 flex-1 flex flex-col">
+                    <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                      <span className="font-mono">SKU: {product.sku}</span>
                       <span className="font-semibold text-emerald-800">{product.grade}</span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
                       {product.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-600 mt-1.5 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
                       {product.description}
                     </p>
 
                     {/* Pack Size Selector */}
                     {product.packSizes && product.packSizes.length > 0 && (
-                      <div className="mt-3 pt-3 border-t border-slate-100">
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">
-                          Pack / Case Size:
+                      <div className="mt-4 pt-3 border-t border-slate-100">
+                        <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
+                          Pack Size
                         </label>
                         <div className="flex flex-wrap gap-1.5">
                           {product.packSizes.map((size) => {
@@ -205,10 +184,10 @@ export function Catalog({
                                 key={size.name}
                                 type="button"
                                 onClick={() => handlePackSizeChange(product.id, size.name)}
-                                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                                className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer ${
                                   isCurrent
-                                    ? "bg-emerald-800 text-white"
-                                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                                    ? "bg-slate-900 text-white"
+                                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                                 }`}
                               >
                                 {size.name}
@@ -219,52 +198,41 @@ export function Catalog({
                       </div>
                     )}
 
-                    {/* Zero Price Notice Box */}
-                    <div className="mt-4 p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <FileText className="w-4 h-4 text-emerald-800" />
-                        <span className="text-xs font-bold text-emerald-900">Wholesale Price:</span>
+                    {/* Price on Request & Action */}
+                    <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+                      <div>
+                        <span className="block text-[11px] uppercase tracking-wider text-slate-400 font-semibold">
+                          Price
+                        </span>
+                        <span className="text-xs font-bold text-emerald-800">
+                          On Request
+                        </span>
                       </div>
-                      <Badge variant="success" className="bg-white text-emerald-800 border-emerald-200 shadow-2xs">
-                        On Request
-                      </Badge>
-                    </div>
 
-                    {/* Actions */}
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2">
                       <Button
+                        size="sm"
                         onClick={() => addToQuote(product, selectedSize)}
-                        className={`flex-1 font-bold text-xs sm:text-sm ${
+                        className={`rounded-xl text-xs font-bold transition-all ${
                           isInQuote
-                            ? "bg-emerald-700 hover:bg-emerald-800 text-white"
-                            : "bg-emerald-800 hover:bg-emerald-900 text-white"
+                            ? "bg-emerald-800 hover:bg-emerald-900 text-white"
+                            : "bg-slate-900 hover:bg-slate-800 text-white"
                         }`}
                       >
                         {isInQuote ? (
                           <>
-                            <Check className="w-4 h-4" />
-                            <span>In Quote List (+)</span>
+                            <Check className="w-3.5 h-3.5 mr-1" />
+                            <span>In Quote</span>
                           </>
                         ) : (
                           <>
-                            <Plus className="w-4 h-4" />
+                            <Plus className="w-3.5 h-3.5 mr-1" />
                             <span>Add to Quote</span>
                           </>
                         )}
                       </Button>
-
-                      <Button
-                        variant="secondary"
-                        size="icon"
-                        onClick={() => handleQuickWhatsApp(product, selectedSize)}
-                        title={`Quick WhatsApp Enquiry for ${product.title}`}
-                        className="hover:bg-emerald-100 hover:text-emerald-900"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                      </Button>
                     </div>
                   </div>
-                </Card>
+                </div>
               );
             })}
           </div>
@@ -273,4 +241,3 @@ export function Catalog({
     </section>
   );
 }
-
