@@ -1,0 +1,72 @@
+{
+  "brand": {
+    "name": "Live7 Wholesale & Retail",
+    "fullName": "Live7 Fresh Foods UK Ltd",
+    "shortName": "Live7",
+    "tagline": "Wholesale & Retail Fresh Produce Merchants",
+    "badge": "Wholesale & Retail Produce Partner",
+    "heroTitle": "Fresh Produce & Bulk Grains.",
+    "heroHighlight": "Direct Depot Sourcing for Wholesale & Retail.",
+    "heroDescription": "Direct UK produce supplier connecting restaurants, caterers, grocers, and residential households with farm-fresh vegetables, seasonal fruits, and premium basmati rice. Commercial crates, euro-pallets, and family pack sizes available.",
+    "heroNotice": "Zero displayed prices — all produce is quoted on request based on order volume, pack size, and delivery location. Request an instant quote online or via WhatsApp.",
+    "companyNumber": "12948123",
+    "vatNumber": "GB 384 1029 44",
+    "year": 2026
+  },
+  "contact": {
+    "phone": "+44 7367335837",
+    "phoneHref": "tel:+447367335837",
+    "phoneDisplay": "+44 7367 335 837",
+    "whatsapp": "+44 7367335837",
+    "whatsappHref": "https://wa.me/447367335837",
+    "whatsappDisplay": "+44 7367 335 837",
+    "email": "[EMAIL_ADDRESS]",
+    "emailHref": "mailto:orders@live7foods.co.uk",
+    "hours": "Monday - Saturday: 6:00 AM - 7:00 PM",
+    "depots": [
+      {
+        "name": "London Distribution Depot",
+        "location": "Park Royal, Commercial Way, London NW10 7PA",
+        "coverage": "Daily drops for Greater London, Kent, Surrey & Essex"
+      },
+      {
+        "name": "Midlands Central Depot",
+        "location": "Perry Barr Hub, Holford Way, Birmingham B6 7AX",
+        "coverage": "Daily fleet for Birmingham, Midlands, Manchester & surrounding"
+      }
+    ]
+  },
+  "announcements": {
+    "topStrip": "Welcome to Live7 • Wholesale & Retail Produce Partner • Commercial Crates & Household Sizes • Fast Turnaround Quotes",
+    "launchBadge": "Accepting wholesale trade accounts and household retail orders across London & Midlands"
+  },
+  "advantages": [
+    {
+      "icon": "storefront",
+      "title": "Wholesale & Retail Ready",
+      "description": "Whether you need full lorry pallets for catering or single sacks for household pantries, we fulfill both with direct depot freshness."
+    },
+    {
+      "icon": "request_quote",
+      "title": "Daily Market Quotes",
+      "description": "Produce rates fluctuate with harvests. We provide transparent, volume-based quotes on request with zero middleman markups."
+    },
+    {
+      "icon": "local_shipping",
+      "title": "Chilled Depot Fleet",
+      "description": "Continuous 4°C refrigerated delivery timed to your morning kitchen prep or residential delivery slot."
+    },
+    {
+      "icon": "inventory_2",
+      "title": "Flexible Pack Sizes",
+      "description": "Choose from consumer retail bags (1kg, 2.5kg, 5kg), commercial catering crates (10kg, 20kg, 25kg), or full pallets."
+    }
+  ],
+  "navigation": [
+    { "label": "Catalog", "target": "#catalog" },
+    { "label": "Categories", "target": "#categories" },
+    { "label": "Wholesale & Retail", "target": "#about" },
+    { "label": "FAQs", "target": "#faq" },
+    { "label": "Depots & Contact", "target": "#contact" }
+  ]
+}

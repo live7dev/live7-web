@@ -1,0 +1,32 @@
+[
+  {
+    "id": "all",
+    "title": "All Produce",
+    "description": "View our complete catalog of farm produce, grains, and catering crates.",
+    "icon": "apps"
+  },
+  {
+    "id": "vegetables",
+    "title": "Fresh Vegetables",
+    "description": "Onions, Maris Piper potatoes, fresh chillies, tomatoes, and everyday staples.",
+    "icon": "eco"
+  },
+  {
+    "id": "fruits",
+    "title": "Seasonal Fruits",
+    "description": "Air-freighted Alphonso mangoes, English Gala apples, and seasonal citrus.",
+    "icon": "nutrition"
+  },
+  {
+    "id": "rice",
+    "title": "Rice & Bulk Grains",
+    "description": "Aged 1121 Basmati, Sona Masoori, raw rice sacks from 5kg to full Euro-pallets.",
+    "icon": "grain"
+  },
+  {
+    "id": "crates",
+    "title": "Commercial Crates & Sacks",
+    "description": "Heavyweight commercial 10kg, 20kg & 25kg catering crates and bulk sacks.",
+    "icon": "inventory_2"
+  }
+]

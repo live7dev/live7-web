@@ -1,0 +1,315 @@
+[
+  {
+    "id": "prod-1",
+    "title": "Royal 1121 Extra Long Basmati Rice",
+    "category": "rice crates",
+    "sku": "L7-RICE-020",
+    "grade": "Grade A Long Grain",
+    "origin": "Punjab Valley",
+    "stockStatus": "In Stock",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhqePFb66eYJKBvSz1zdZzRCvZIOm1pme85PkA3M3FcpGZgYujgg6jqqClxI2uVrTfY1taCSqFhXKvnGxZc8U81r-oVshUBi7NxKvlxPqpod37V9JIog_WqRnBvO5Ak4TxHPL6Q9PTJ3jf9iEhikNFWg2uh_t5wLukThhfbN3CrZKR69jZbuVdDJpg3sUNYqpYowBjBTzPOenFwBS9s4LoEC9d2ERUXNW-uBT6wXs",
+    "alt": "Commercial sack of premium royal long grain Basmati rice",
+    "description": "Naturally aged for 24 months with high grain elongation and non-sticky texture. Ideal for restaurants, banqueting, and retail grocers.",
+    "packSizes": [
+      { "name": "5kg Retail Pack", "type": "Retail" },
+      { "name": "20kg Heavy Sack", "type": "Commercial Catering", "default": true },
+      { "name": "50-Sack Pallet (1000kg)", "type": "Bulk Pallet" }
+    ],
+    "volumeTiers": "Available in single sacks, 5+ sack wholesale batches, and full pallets",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Store in a cool, dry ambient store"
+  },
+  {
+    "id": "prod-2",
+    "title": "English Farm White Potatoes (25kg Sack)",
+    "category": "vegetables crates",
+    "sku": "L7-POT-025",
+    "grade": "Maris Piper / Markies",
+    "origin": "Kent, UK",
+    "stockStatus": "Chilled Fresh",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJGaTLmPlJdmzTLlBKwoGXWLdS-AmLl71_ksFxORjc_5T-_6mM287J3pXVsOoK2D28Xb2BWLMex2zaPDnlMKp06yja-mJDRLU2Mk3-PmVXU3Wl_DDaNscGwdoi-KGxNCPrilpt0sM0pg1lcGIjZ7QqoBkyuYYB7qTcMatuDa7sKM26UiFpGCx8FAhY2NGxhTYgbDtKTc-xPpcbNVEqTX-iSJuTb-49Ex7F8QXxoXA",
+    "alt": "English white Maris Piper potatoes in heavy brown paper merchant sack",
+    "description": "High-dry-matter chipping and roasting potatoes sourced directly from verified British growers. Available washed or unwashed.",
+    "packSizes": [
+      { "name": "2.5kg Poly Bag", "type": "Retail" },
+      { "name": "25kg Paper Sack", "type": "Commercial Kitchen", "default": true },
+      { "name": "1-Tonne Wooden Box", "type": "Bulk Consignment" }
+    ],
+    "volumeTiers": "Single sacks, 10+ sacks hospitality tier, and standing weekly depot runs",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled dark storage at 7°C - 9°C"
+  },
+  {
+    "id": "prod-3",
+    "title": "Grade-A Brown Cooking Onions (10kg Net)",
+    "category": "vegetables crates",
+    "sku": "L7-ON-010",
+    "grade": "Size 70-90mm",
+    "origin": "Direct Farm Import",
+    "stockStatus": "Grade 1 Dry",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIba4awusbqKIiFEMfaePDqeaDjFk_Df99O3_Gi9ZedaYDrtXz9UGkvZIJIVxO4r0sv0dgWmq7JIclKbdgR4jtXkAhef1Q9R-dXFYAdBMxfSPXg-aA7c-_ZxOpGdF3SXITujfodCXnwhXK9VPt-dLVeIE1sPZbXTfHajj_TBg3KfPH4BllNm6_q6JdbyCWj-1P0_w_86szRBOi1r4XT9kmS2XLjT8Zdle76fD6YUM",
+    "alt": "Red mesh net packed tight with firm golden brown cooking onions",
+    "description": "Firm bulbs with tight papery skins and high pungency. The workhorse foundation for commercial sauces, stocks, and curries.",
+    "packSizes": [
+      { "name": "1kg Pre-pack Net", "type": "Retail" },
+      { "name": "10kg Red Mesh Net", "type": "Commercial Kitchen", "default": true },
+      { "name": "Full Pallet (100 Nets)", "type": "Volume Trade" }
+    ],
+    "volumeTiers": "Single nets, 5+ nets trade rate, 100-bag pallet procurement",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Well-ventilated dry ambient storage"
+  },
+  {
+    "id": "prod-4",
+    "title": "Vine-Ripened Plum Tomatoes (6kg Flat)",
+    "category": "vegetables",
+    "sku": "L7-TOM-006",
+    "grade": "Sweetness Grade A",
+    "origin": "Glasshouse Sourced",
+    "stockStatus": "Chilled 6°C",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCF_NKbH2tRaisrriZQvU-f7_H3URSfWt-5_vg7Hu8SJxcWDFUjQA5TTHslC89FszLDmuOvxk7rdSYlBUblhoR6gni3xwzeKc87xjKCE-mah03ybASUBf-0hkvJLLdwzF2c2NTApsCW8vr_bxw-Uf9pi32r3LG-PQPSLuFA6Ri_nzqqa3_tJeN3Udhczy5CzkBDUp1cSfie91A_xZh6kvBS1NShuXFirIfUYkWRXI0",
+    "alt": "Flat produce carton containing glossy red vine plum tomatoes with green calyx stems",
+    "description": "Dense, meaty flesh with rich natural flavour and low moisture. Perfect for reduction sauces, salads, and Mediterranean menus.",
+    "packSizes": [
+      { "name": "500g Punnet", "type": "Retail" },
+      { "name": "6kg Trade Flat Box", "type": "Restaurant Standard", "default": true }
+    ],
+    "volumeTiers": "Single flat, 4+ flats restaurant rate, standing daily fresh deliveries",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Temperature controlled at 10°C - 12°C"
+  },
+  {
+    "id": "prod-5",
+    "title": "King Alphonso Mangoes (12-Piece Box)",
+    "category": "fruits",
+    "sku": "L7-MAN-012",
+    "grade": "Premium Export GI",
+    "origin": "Direct Air-Freight",
+    "stockStatus": "Seasonal Air Batch",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuASJLoxb9fQUax22MGx9SlfuwOQJ2rwwkGYSKW_eKNOqUl5q08QWJFoDqYHl9gH7pOl5xW0BvsimFZ0CmwtM1ey8BvCZbjixSiR6ZIVn8EbEMfoxNuASoqR1-uULapPn257XkUHlxwNzZ1mOfp4sSI_iT5rfTzqy1mN7xCS40jGV3GhnRfy8mqEsdLv5eu3L3OHtt-uwSAgj8eFkTDyvFeFfRLZCtpv1HGK-X3CIys",
+    "alt": "Premium export carton holding 12 golden ripe Alphonso mangoes in protective netting",
+    "description": "Hand-picked, tree-ripened royal Alphonso mangoes flown directly via cool-chain air-freight. Velvety texture and sweet aroma.",
+    "packSizes": [
+      { "name": "12-Piece Box", "type": "Standard Box", "default": true },
+      { "name": "Master Carton (4 Boxes)", "type": "Wholesale Case" }
+    ],
+    "volumeTiers": "Single gift carton, 6+ boxes wholesale tier, custom consignment",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled dispatch to room temperature ripening"
+  },
+  {
+    "id": "prod-6",
+    "title": "Green Birdseye Hot Chillies (5kg Box)",
+    "category": "vegetables crates",
+    "sku": "L7-CHL-005",
+    "grade": "Pungent Grade A",
+    "origin": "Direct Fresh Import",
+    "stockStatus": "High Crisp",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC_5v-Pmcs6QQY3Uxyx8LzOsoXASM5hAYtapXLeMoiFZxrSc64lQB7-V-6FPaYxVUC5XtmmBjQi9gA2fVoJfLKJr7IZ3P-gVD2wFnT9rsezwV0I673XYkMV_F6-fqwXxXeV17aJPXDzx-L1mmoay1Fwwylhxwe1nsiboJbqi7oHgk5RYfh90N6gKrVlZRbBiasNZSBAGlJhKH__lKvnnF5doboVSdJQ3-MGl0i75Vg",
+    "alt": "Commercial produce tray with glossy dark green hot birdseye chillies",
+    "description": "Crisp green chillies with fresh stems attached, offering sharp clean heat. Essential for South Asian, Thai, and Caribbean kitchens.",
+    "packSizes": [
+      { "name": "500g Punnet", "type": "Retail" },
+      { "name": "5kg Heavy Carton", "type": "Commercial Catering", "default": true }
+    ],
+    "volumeTiers": "Single punnet, 3+ carton chef volume, regular trade runs",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled cold store at 5°C - 7°C"
+  },
+  {
+    "id": "prod-7",
+    "title": "Premium Sona Masoori Rice (10kg Bag)",
+    "category": "rice crates",
+    "sku": "L7-SON-010",
+    "grade": "Double Polished Raw",
+    "origin": "Andhra Harvest",
+    "stockStatus": "New Harvest Grade",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDQRX5vndv2B_gNaNfDXXjnThHne6bPBtzonuBbGw4tGETfYAnoBgPQQ0knhu6DLUzWPRdidyT_S_RQVnYQOp4KvmU1l_xH0ofC7aLlmj0waCsNNVA9ascJShowJq_2gxQG3ahe_mFVg9i-MFfkZ59T3VLc15IfvL-s68ARdcVw16nktoLHm75-J4hAiaiB0gbEjmwKdhmon-wD0ZMsgvNKN6yzbulaZbgP-AlKwfA",
+    "alt": "Sack of premium double-polished Sona Masoori raw rice",
+    "description": "Delicate, lightweight, aromatic daily grain with low starch content. Perfect for traditional South Asian cuisine and everyday culinary service.",
+    "packSizes": [
+      { "name": "10kg Bag", "type": "Standard Sack", "default": true },
+      { "name": "20kg Heavy Bag", "type": "Commercial Standard" },
+      { "name": "Pallet (60 Sacks)", "type": "Consignment" }
+    ],
+    "volumeTiers": "Single sack, 5+ wholesale sacks, pallet procurement discounts",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Ambient sealed dry food store"
+  },
+  {
+    "id": "prod-8",
+    "title": "English Orchard Gala Apples (12kg Crate)",
+    "category": "fruits crates",
+    "sku": "L7-APP-012",
+    "grade": "Class 1 Crisp",
+    "origin": "Kent Cooperative Orchards",
+    "stockStatus": "Fresh Harvest",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmEwNKOoKOQp2ch1Y1FXVYp_3-K6qp3WNutNZdRN_CLCHka8i_lbYdX6v3y6fjlh2zWnhZD7lBZs4l5IUR5bb2ohoL0iyPI2wBGnIARJhOPJ3-JNZugrpBLDB-ZxYRhXT3xqvIZgcyQ_Zu4g9kxDvEM6ZS7wx63oKLhcx107D2MScYdf-rBvzZXnHMnfIC8D3hVwbXsE46LEj2K62fDInnQuoDd9TKMu3gyt4Y298",
+    "alt": "Wooden 12kg orchard crate packed with crisp red Gala apples",
+    "description": "Naturally crisp, fragrant eating apples harvested directly from verified orchards in Kent. Ideal for commercial canteens, cafes, and grocers.",
+    "packSizes": [
+      { "name": "1kg Pre-pack (6-Pack)", "type": "Retail" },
+      { "name": "12kg Wooden Crate", "type": "Catering & Grocer", "default": true }
+    ],
+    "volumeTiers": "Single crate, 3+ crates catering rate, contracted regular supply",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled store at 3°C - 5°C"
+  },
+  {
+    "id": "prod-9",
+    "title": "Fresh Root Ginger (5kg Commercial Box)",
+    "category": "vegetables crates",
+    "sku": "L7-GIN-005",
+    "grade": "Grade A Clean Washed",
+    "origin": "Direct Farm Import",
+    "stockStatus": "In Stock",
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80",
+    "alt": "Fresh knobby root ginger in commercial produce packing",
+    "description": "Plump, fibrous, highly aromatic fresh ginger roots. Clean skins, high juice yield, essential for catering sauces, chai, and marinades.",
+    "packSizes": [
+      { "name": "1kg Poly Pack", "type": "Retail" },
+      { "name": "5kg Heavy Carton", "type": "Commercial Kitchen", "default": true },
+      { "name": "Pallet (80 Cartons)", "type": "Volume Consignment" }
+    ],
+    "volumeTiers": "Single retail pack, 3+ cartons chef rate, pallet consignment",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Ambient dry store at 12°C - 14°C"
+  },
+  {
+    "id": "prod-10",
+    "title": "White Cooking Garlic Nets (5kg Sack)",
+    "category": "vegetables crates",
+    "sku": "L7-GAR-005",
+    "grade": "Size 50-60mm Tight Cloves",
+    "origin": "Direct Import",
+    "stockStatus": "Dry Ambient",
+    "image": "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=600&q=80",
+    "alt": "Clean white garlic bulbs bundled in commercial wholesale net",
+    "description": "Durable, dry white garlic bulbs with tight cloves and robust pungent flavour. Long storage life with zero sprouting.",
+    "packSizes": [
+      { "name": "3-Bulb Retail Net", "type": "Retail" },
+      { "name": "5kg Red Mesh Sack", "type": "Commercial Kitchen", "default": true },
+      { "name": "Master Pallet (100 Sacks)", "type": "Trade Procurement" }
+    ],
+    "volumeTiers": "Single retail pack, 5+ sacks trade tier, full pallet lots",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Cool, dry and well-ventilated ambient depot store"
+  },
+  {
+    "id": "prod-11",
+    "title": "Fresh Tender Okra / Bhindi (5kg Box)",
+    "category": "vegetables",
+    "sku": "L7-OKR-005",
+    "grade": "Grade A Tender Green",
+    "origin": "Direct Air-Freight",
+    "stockStatus": "Daily Fresh Arrival",
+    "image": "https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?auto=format&fit=crop&w=600&q=80",
+    "alt": "Fresh vibrant green slender tender okra pods in commercial flat tray",
+    "description": "Tender, snap-fresh green okra pods with zero woody fibres. Flown in under constant temperature control for restaurants and grocers.",
+    "packSizes": [
+      { "name": "500g Punnet", "type": "Retail" },
+      { "name": "5kg Catering Flat Box", "type": "Commercial Standard", "default": true }
+    ],
+    "volumeTiers": "Single punnet, 4+ flat boxes restaurant volume, daily delivery runs",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled store at 8°C - 10°C (do not freeze)"
+  },
+  {
+    "id": "prod-12",
+    "title": "British Farm Washed Carrots (10kg Bag)",
+    "category": "vegetables crates",
+    "sku": "L7-CAR-010",
+    "grade": "Class 1 Red Tractor",
+    "origin": "Lincolnshire & Norfolk, UK",
+    "stockStatus": "Farm Direct",
+    "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5c317?auto=format&fit=crop&w=600&q=80",
+    "alt": "Clean washed bright orange British carrots in commercial produce bag",
+    "description": "Sweet, crunchy British carrots washed and graded for commercial soup bases, roasting, school catering, and retail packs.",
+    "packSizes": [
+      { "name": "1kg Retail Bag", "type": "Retail" },
+      { "name": "10kg Heavy Bag", "type": "Commercial Catering", "default": true },
+      { "name": "1-Tonne Pallet Box", "type": "Wholesale Consignment" }
+    ],
+    "volumeTiers": "Single retail bag, 5+ bags catering rate, pallet bin dispatch",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled cold store at 2°C - 4°C"
+  },
+  {
+    "id": "prod-13",
+    "title": "Royal Thai Hom Mali Jasmine Rice (10kg)",
+    "category": "rice crates",
+    "sku": "L7-JAS-010",
+    "grade": "100% Pure Hom Mali",
+    "origin": "Nakhon Ratchasima, Thailand",
+    "stockStatus": "In Stock",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80",
+    "alt": "Commercial bag of fragrant long grain Jasmine rice",
+    "description": "Naturally fragrant, pandan-scented premium Thai Jasmine rice. Soft, slightly sticky cooked texture indispensable for Pan-Asian dining.",
+    "packSizes": [
+      { "name": "5kg Pack", "type": "Retail" },
+      { "name": "10kg Heavy Bag", "type": "Commercial Standard", "default": true },
+      { "name": "Pallet (60 Sacks)", "type": "Consignment" }
+    ],
+    "volumeTiers": "Single sack, 5+ sacks restaurant tier, pallet procurement",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Sealed dry storage ambient"
+  },
+  {
+    "id": "prod-14",
+    "title": "South Indian Ponni Boiled Rice (10kg Bag)",
+    "category": "rice crates",
+    "sku": "L7-PON-010",
+    "grade": "Parboiled Clean Mill",
+    "origin": "Cauvery Delta, India",
+    "stockStatus": "In Stock",
+    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80",
+    "alt": "Sack of premium South Indian parboiled Ponni rice",
+    "description": "Nutritious, firm parboiled medium-slender grain rice. Fluffs up beautifully when cooked, ideal for daily household dining and catering.",
+    "packSizes": [
+      { "name": "10kg Bag", "type": "Household & Retail", "default": true },
+      { "name": "20kg Heavy Sack", "type": "Commercial Standard" },
+      { "name": "Pallet (60 Sacks)", "type": "Consignment" }
+    ],
+    "volumeTiers": "Single sack, 5+ sacks wholesale tier, full pallet rates",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Cool dry ambient store"
+  },
+  {
+    "id": "prod-15",
+    "title": "Spanish Juicy Eureka Lemons (10kg Flat)",
+    "category": "fruits crates",
+    "sku": "L7-LEM-010",
+    "grade": "Class 1 High Juice Yield",
+    "origin": "Murcia, Spain",
+    "stockStatus": "Chilled Fresh",
+    "image": "https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=600&q=80",
+    "alt": "Sturdy orchard wooden flat crate packed with bright yellow Spanish lemons",
+    "description": "Glossy yellow thin-skinned lemons with intense acidity and high juice volume. Essential for bars, restaurants, marinades, and retail baskets.",
+    "packSizes": [
+      { "name": "500g Net (4-Pack)", "type": "Retail" },
+      { "name": "10kg Flat Carton", "type": "Bar & Kitchen Standard", "default": true }
+    ],
+    "volumeTiers": "Single net, 3+ flat cartons hospitality tier, standing weekly drops",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Chilled store at 8°C - 10°C"
+  },
+  {
+    "id": "prod-16",
+    "title": "Weekly Fresh Market Discovery Box",
+    "category": "vegetables fruits",
+    "sku": "L7-BOX-001",
+    "grade": "Farm Curated Seasonal Assortment",
+    "origin": "Kent Growers & Direct Depot",
+    "stockStatus": "Prepared Daily",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80",
+    "alt": "Abundant fresh produce crate filled with seasonal vegetables and fruits",
+    "description": "Curated selection of fresh potatoes, onions, tomatoes, carrots, seasonal fruits, and aromatics. Perfect for households or chef testing.",
+    "packSizes": [
+      { "name": "Standard Family Hamper (8kg)", "type": "Household Retail", "default": true },
+      { "name": "Chef Kitchen Mega Hamper (18kg)", "type": "Commercial Catering" }
+    ],
+    "volumeTiers": "Single hamper trial, weekly standing subscription drops with free delivery",
+    "pricingNotice": "Wholesale & Retail Pricing On Request",
+    "storage": "Dual temperature chilled delivery tote"
+  }
+]
